@@ -16,16 +16,16 @@ public class CourseJdbcCommandLinerRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        // add new records
-        repository.insertRecord(new Course(1,"DSA","Manas"));
-        repository.insertRecord(new Course(2,"System Design","Harshit"));
-        repository.insertRecord(new Course(3,"DEV","Srinath"));
-
-        // delete a record by Id
-        repository.deleteById(2);
-
-        // select by Id
-        System.out.println(repository.findById(1));
-        System.out.println(repository.findById(3));
+//        // add new records
+//        repository.insertRecord(new Course(1,"DSA","Manas"));
+//        repository.insertRecord(new Course(2,"System Design","Harshit"));
+//        repository.insertRecord(new Course(3,"DEV","Srinath"));
+//
+//        // delete a record by Id
+//        repository.deleteById(2);
+//
+//        // select by Id
+//        System.out.println(repository.findById(1));
+//        System.out.println(repository.findById(3));
     }
 }
