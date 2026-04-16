@@ -16,7 +16,16 @@ public class CourseJdbcRepository {
                 values (?,?,?);
                 """;
 
+    private String DELETE_QUERY= """
+                Delete from course
+                 where id=?
+            """;
+
     public void insertRecord(Course course){
         springJdbcTemplate.update(INSERT_QUERY,course.getId(),course.getName(),course.getAuthor());
+    }
+
+    public void deleteById(long id){
+        springJdbcTemplate.update(DELETE_QUERY,id);
     }
 }

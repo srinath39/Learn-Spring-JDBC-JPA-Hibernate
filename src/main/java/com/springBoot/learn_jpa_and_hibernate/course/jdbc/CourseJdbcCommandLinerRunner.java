@@ -15,6 +15,13 @@ public class CourseJdbcCommandLinerRunner implements CommandLineRunner {
     // command line runner , By default spring runs this method while application start up
     @Override
     public void run(String... args) throws Exception {
-        repository.insertRecord(new Course(2,"System Design","Srinath"));
+
+        // add new records
+        repository.insertRecord(new Course(1,"DSA","Manas"));
+        repository.insertRecord(new Course(2,"System Design","Harshit"));
+        repository.insertRecord(new Course(3,"DEV","Srinath"));
+
+        // delete a record by Id
+        repository.deleteById(2);
     }
 }
