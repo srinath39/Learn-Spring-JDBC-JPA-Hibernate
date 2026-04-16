@@ -23,5 +23,9 @@ public class CourseJdbcCommandLinerRunner implements CommandLineRunner {
 
         // delete a record by Id
         repository.deleteById(2);
+
+        // select by Id
+        System.out.println(repository.findById(1));
+        System.out.println(repository.findById(3));
     }
 }
