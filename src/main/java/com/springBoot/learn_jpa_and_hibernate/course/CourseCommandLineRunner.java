@@ -22,7 +22,7 @@ public class CourseCommandLineRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         repository.save(new Course(1,"AI Engineer","Srinath"));
         repository.save(new Course(2,"Security Engineer","Bala"));
-        repository.save(new Course(3,"Database Engineer","Somesh"));
+        repository.save(new Course(3,"Database Engineer","Srinath"));
 
         // delete a record by Id
         repository.deleteById(2l);
@@ -34,5 +34,9 @@ public class CourseCommandLineRunner implements CommandLineRunner {
         // other methods in spring JPA
         System.out.println(repository.findAll());
         System.out.println(repository.count());
+
+        // customizer methods calling
+        System.out.println(repository.findByAuthor("Srinath"));
+        System.out.println(repository.findByName("AI Engineer"));
     }
 }
